@@ -2,6 +2,8 @@ import React, { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 import "./Navbar.css";
 import GraphicDesign from "../submenu/GraphicDesign";
+import ProgrammingTech from "../submenu/ProgrammingTech";
+import VideoAnimation from "../submenu/VideoAnimation";
 
 const Navbar = () => {
   const [active, setActive] = useState(false);
@@ -89,8 +91,8 @@ const Navbar = () => {
             </Link>
             <Link className="link" to="/">
               Video & Animation
-              <div className="dropdown">
-                <GraphicDesign />
+              <div className="dropdown2">
+                <VideoAnimation />
               </div>
 
             </Link>
