@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 import "./Navbar.css";
+import GraphicDesign from "../submenu/GraphicDesign";
 
 const Navbar = () => {
   const [active, setActive] = useState(false);
@@ -21,9 +22,9 @@ const Navbar = () => {
   }, []);
 
   const currentUser = {
-    id: 1,
-    username: "John Doe",
-    isSeller: true,
+    // id: 1,
+    // username: "John Doe",
+    // isSeller: true,
   };
 
   return (
@@ -39,10 +40,10 @@ const Navbar = () => {
           <span>Fiverr Business</span>
           <span>Explore</span>
           <span>English</span>
-          {!currentUser && <span>Sign in</span>}
-          {!currentUser?.isSeller && <span>Become a Seller</span>}
-          {!currentUser && <button>Join</button>}
-          {currentUser && (
+          <span>Sign in</span>
+          <span>Become a Seller</span>
+          <button>Join</button>
+          {/* {currentUser && (
             <div className="user" onClick={() => setOpen(!open)}>
               <img
                 src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRrJ2R9O5THIdzGHJl3RjnK2Bxzj20iYSsMQA&usqp=CAU"
@@ -73,18 +74,24 @@ const Navbar = () => {
                 </div>
               )}
             </div>
-          )}
+          )} */}
         </div>
       </div>
       {(active || pathname !== "/") && (
-        <>
+        <div className="mainMenuLinks">
           <hr />
           <div className="menu">
             <Link className="link menuLink" to="/">
               Graphics & Design
+              <div className="dropdown">
+                <GraphicDesign />
+              </div>
             </Link>
             <Link className="link" to="/">
               Video & Animation
+              <div className="dropdown">
+                <GraphicDesign />
+              </div>
             </Link>
             <Link className="link" to="/">
               Writing & Transition
@@ -108,7 +115,8 @@ const Navbar = () => {
               Lifestyle
             </Link>
           </div>
-        </>
+          <hr />
+        </div>
       )}
     </div>
   );
