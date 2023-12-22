@@ -94,6 +94,7 @@ const Navbar = () => {
               <div className="dropdown2">
                 <VideoAnimation />
               </div>
+
             </Link>
             <Link className="link" to="/">
               Writing & Transition
