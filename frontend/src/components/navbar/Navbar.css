@@ -123,7 +123,26 @@ hr {
   z-index: 1;
 }
 
-.link:hover .dropdown {
+.dropdown2 {
+  display: none;
+  position: absolute;
+  top: 160%;
+  left: -180px;
+  width: 97vw;
+  height: 85vh;
+  background-color: #fff; 
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  border-radius: 20px;
+  z-index: 1;
+}
+
+.link:hover .dropdown{
   display: block;
   padding: 25px;
 }
+
+.link:hover .dropdown2{
+  display: block;
+  padding: 25px;
+}
+
