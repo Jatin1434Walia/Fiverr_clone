@@ -92,6 +92,7 @@ const Navbar = () => {
               <div className="dropdown">
                 <GraphicDesign />
               </div>
+
             </Link>
             <Link className="link" to="/">
               Writing & Transition
