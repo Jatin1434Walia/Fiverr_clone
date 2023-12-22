@@ -14,7 +14,7 @@
   color: black;
 }
 .navbar .container {
-  width: 1400px;
+  min-width: 100%;
   display: flex;
   justify-content: space-between;
   padding: 10px 10px;
@@ -32,9 +32,9 @@
 }
 .container .links {
   display: flex;
-  gap: 24px;
+  gap: 20px;
   align-items: center;
-  font-weight: 600;
+  font-weight: 500;
   font-size: 20px;
 }
 .links span {
@@ -45,11 +45,18 @@
 }
 .links button {
   color: white;
-  padding: 10px 20px;
+  padding: 3px 8px;
   border-radius: 5px;
   border: 1px solid white;
   cursor: pointer;
   background-color: transparent;
+}
+.mainMenuLinks{
+  padding-bottom: 0.2px;
+}
+.active .container .links button{
+  border-color: #1dbf73;
+  color: #1dbf73;
 }
 .links button:hover {
   background-color: #1dbf73;
@@ -68,7 +75,7 @@
   border-radius: 50%;
   object-fit: cover;
 }
-.user .options {
+/* .user .options {
   position: absolute;
   top: 50px;
   right: 0;
@@ -82,7 +89,7 @@
   color: gray;
   width: 200px;
   font-weight: 300;
-}
+} */
 hr {
   width: 100%;
   height: 0px;
@@ -96,4 +103,27 @@ hr {
   justify-content: space-between;
   font-weight: 300;
   color: gray;
+}
+
+.link {
+  position: relative;
+  margin: 0 10px;
+}
+
+.dropdown {
+  display: none;
+  position: absolute;
+  top: 160%;
+  left: -30;
+  width: 97vw;
+  height: 85vh;
+  background-color: #fff; 
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  border-radius: 20px;
+  z-index: 1;
+}
+
+.link:hover .dropdown {
+  display: block;
+  padding: 25px;
 }
